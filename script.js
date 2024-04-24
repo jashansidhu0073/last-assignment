@@ -1,9 +1,9 @@
 
 function toggleAccordion(id) {
-    const content = document.getElementById(id);
-    const chevron = content.previousElementSibling.querySelector("i");
+    const content = document.getElementById(id); 
+    const chevron = content.previousElementSibling.querySelector("i"); 
 
-    if (content.classList.contains("hidden")) {
+    if (content.classList.contains("hidden")) { 
         content.classList.remove("hidden"); 
         chevron.classList.add("rotate-180"); 
     } else {
@@ -11,7 +11,6 @@ function toggleAccordion(id) {
         chevron.classList.remove("rotate-180"); 
     }
 }
-
 
 function applyHoverEffects() {
     const buttons = document.querySelectorAll("button");
@@ -25,11 +24,9 @@ function applyHoverEffects() {
     });
 }
 
-// 
 function sanityCheck() {
-    console.log("!Sanity check: all good!");
+    console.log("Sanity check: all good!");
 }
-
 
 window.addEventListener("load", () => {
     sanityCheck(); 

@@ -1,153 +1,159 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #aa8080; 
+    background-color: #f7fafc;
 }
 
-
 nav {
-    position: absolute; 
-    top: 0; 
-    width: 100%; 
-    background-color: rgba(255, 255, 255, 0.8); 
-    z-index: 100; 
-    padding: 2rem; 
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 1rem; 
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex; 
-    justify-content: space-around; 
+    justify-content: space-around;
 }
 
-nav a {
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #4a5568; 
     text-decoration: none; 
-    color: #555; 
     transition: color 0.3s; 
 }
 
-nav a:hover {
-    color: blue; 
+nav ul li a:hover {
+    color: #3182ce; 
 }
 
-section.bg-cover {
+.hero {
     background-size: cover; 
-    background-position: center; 
-    height: 1000px; 
+    background-position: center;
+    height: 64vh; 
 }
 
-section.bg-cover h1 {
-    font-size: 3rem; 
-    font-weight: bold; 
+.hero .overlay {
+    background: rgba(0, 0, 0, 0.5); 
     color: white; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.grid {
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 3rem; 
+.section {
+    padding: 2rem; 
 }
 
-.grid div {
-    background-color: white; 
-    padding: 3rem; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s, box-shadow 0.3s; 
+.section h2 {
+    font-size: 2rem; 
+    margin-bottom: 1rem; 
 }
 
-.grid div:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2); 
+form {
+    max-width: 600px; 
+    margin: auto; 
 }
 
-.grid img {
-    width: 50%; 
-    height: 50%; 
-    object-fit: cover;
-    border-radius: 0.5rem; 
-    position: center;
+form .form-group {
+    margin-bottom: 1rem; 
 }
 
-.grid h3 {
-    font-size: 3rem; 
+form label {
+    color: #2d3748; 
 }
 
-.grid p {
-    font-size: 3rem; 
-    color: #666; 
+form input,
+form textarea {
+    border: 1px solid #cbd5e0; 
+    padding: 0.5rem; 
+    width: 100%; 
+    border-radius: 0.25rem; 
 }
 
-
-
-button {
-    background-color: blue; 
+form button {
+    background-color: #3182ce; 
     color: white; 
-    padding: 10px 20px; 
+    padding: 0.5rem 1rem; 
+    border-radius: 0.25rem; 
+    transition: background-color 0.3s; 
+}
+
+form button:hover {
+    background-color: #2b6cb0; 
+}
+
+.video-section {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
+.video-section {
+    padding: 2rem; 
+    text-align: center; 
+}
+
+.video-section iframe {
+    width: 100%; 
+    max-width: 560px; 
+    height: 315px; 
     border: none; 
-    cursor: pointer; 
-    transition: background-color 0.3s, transform 0.3s; 
+    border-radius: 0.25rem; 
+    overflow: hidden; 
 }
 
-button:hover {
-    background-color: darkblue; 
-    transform: scale(1.05); 
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem; 
+}
+
+.product-card {
+    background-color: #ffffff; 
+    padding: 1.5rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 0.5rem; 
+    text-align: center; 
+    transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.product-card img {
+    width: 66%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 0.5rem; 
 }
 
 footer {
-    background-color: rgb(187, 140, 140); 
-    color: black; 
+    background-color: #ffffff; 
     text-align: center; 
-    padding: 1.5rem; 
-    font-size:2rem; 
+    padding: 2rem; 
+}
+
+footer .company-info {
+    color: #2d3748; 
 }
 
 footer a {
-    color: blue; 
-    text-decoration: none;
+    color: #3182ce; 
+    text-decoration: none; 
     transition: color 0.3s; 
 }
 
 footer a:hover {
-    color: darkblue; 
+    color: #63b3ed; 
 }
 
-@media (max-width: 768px) { 
-    .grid {
-        grid-template-columns: 1fr; 
-    }
-
-    .grid div {
-        padding: 1.5rem; 
-        height: auto; 
-    }
-
-    section.bg-cover {
-        height: 50vh; 
-    }
-
-    section.bg-cover h1 {
-        font-size: 2.5rem; 
-    }
-}
-
-@media (max-width: 480px) { 
-    section.p-8 {
-        padding: 1rem; 
-    }
-
-    .grid img {
-        height: 150px; 
-    }
-
-    section.bg-cover {
-        height: 40vh; 
-    }
-
-    section.bg-cover h1 {
-        font-size: 2rem; 
+footer .social-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 1rem; 
 }
